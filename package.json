@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "start": "nodemon 05-Nodejs-Express-Server-EJS-Template-Engine-Part-4/express/test-server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cookie-session": "^2.1.0",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "init": "^0.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
