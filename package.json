@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "nodemon 05-Nodejs-Express-Server-EJS-Template-Engine-Part-4/express/test-server.js"
+    "start": "nodemon 07-Nodejs-Express-EJS-Delete-Data-with-jQuery-Part-6/express/test-server.js"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
