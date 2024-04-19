@@ -6,7 +6,7 @@ const cookieSession = require("cookie-session");
 var app = new express();
 const PORT = 3000;
   // console.log('Server started and listning on port ${server.address().port}');
-  app.set('views','./07-Nodejs-Express-EJS-Delete-Data-with-jQuery-Part-6/views');
+  app.set('views','./08-Nodejs-Express-EJS-Edit-Data-Part-7/views');
 app.use(express.static(__dirname));
 app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(cookieParser());
