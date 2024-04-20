@@ -20,8 +20,8 @@
   <script language="javascript">
   $(document).ready(function(e){
     $('.delete').on('click', function(e){
-      var currenrRow = $(this).closest('tr');
-      var id = currenrRow.find("td:eq(0)").text();
+      var currentRow = $(this).closest('tr');
+      var id = currentRow.find("td:eq(0)").text();
       // alert(id);
       $.ajax({
         url: "/deletedept",
@@ -38,7 +38,15 @@
     });
 
     $('.edit').on('click', function(e){
-      $('#exampleModal').modal('toggle');
+    let currentRow = $(this).closest("tr");
+    let id = currentRow.find("td:eq(0)").text();
+    let dname = currentRow.find("td:eq(1)").text();
+    $('#exampleModal').modal('toggle');
+    $('#deptid').text(id);
+    $('#dname').val(dname);
+    console.log("test", id, dname);
+    // console.log("Clicked. . ");
+    // alert("Clicked. . ");
     })
 
   });
@@ -65,7 +73,7 @@
             <td><%= d.dname %></td>
             <td><button class="btn btn-danger delete">Delete</td>
             <td>
-              <button type="button" class="btn btn-warning edit" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+              <button type="button" class="btn btn-warning edit" data-bs-toggle="modal" data-bs-target="#exampleModallll1">
                 Edit
               </button>
             </td>
@@ -96,7 +104,8 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        <span id="deptid"></span>
+        <input type="text" id="dname" name="dname" class="form-control" />
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
